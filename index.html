@@ -28,7 +28,17 @@
         }
     </style>
 
-
+    <script>
+        /*
+            A potential fix which binds the "mousemove" event to trigger the audio
+            to start playing, this more than likely still blocks audio unfortunately.
+        */
+        window.onload = function(){
+            document.body.addEventListener("mousemove", (event) => {
+                document.getElementById("spamtonNeo").play();
+            });
+        }
+    </script>
 
 </head>
 
@@ -37,7 +47,7 @@
     <h1 style="background-color: slateblue"><b>can you handle <i>my pipi</i></b></h1>
  <p><small><i>Spammy bOOOOOOOOOOOOOOOOOI!!!!!!!!!</i></small></p>
 
-<audio src="maps.mp3" loop autoplay></audio>
+<audio src="maps.mp3" id="spamtonNeo" loop auotplay></audio>
 
 
  <img src="1vzcp0s3zfr71.png" id="spamtonImage"> 
